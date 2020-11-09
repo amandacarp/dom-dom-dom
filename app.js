@@ -19,7 +19,6 @@ button.addEventListener("click", function(){
     square.id = count;
     document.body.appendChild(square);
     square.style.display = "inline-block";
-    square.style.flexFlow = "row wrap";
     square.style.backgroundColor = "black";
     square.style.width = "100px";
     square.style.height = "100px"
@@ -46,6 +45,28 @@ button.addEventListener("click", function(){
         text.style.opacity="0"
     }
 
+//when a square is clicked - random color
+    let colors = ['red', 'blue', 'green', 'yellow', 'purple', 'pink', 'white', 'black'];
+
+    function getRandomColor () {
+        let randomColor = colors[Math.floor(Math.random() * colors.length)];
+        return randomColor;
+    }
+ square.addEventListener("click", function(){
+    let randomColor = getRandomColor();
+    square.style.backgroundColor = randomColor;
+ })   
+
+ //when a square is double clicked
+ square.addEventListener("dblclick", function(){
+
+    if (square.id % 2 === 0) {
+        square.remove();
+    }
+    else if (count % 2 !== 0){
+        
+    }
+ })
    
 })
 
