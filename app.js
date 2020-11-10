@@ -58,14 +58,14 @@ button.addEventListener("click", function(){
  //when a square is double clicked
  square.addEventListener("dblclick", function(){
 
-    if (square.id % 2 === 0) {
+    if (count % 2 === 0) {
         if  (document.getElementById(count).nextSibling === null){
             alert("NO SQUARE NEXT TO YOU!")
         }else {
             this.nextSibling.remove();
         }
     }
-    else if (square.id % 2 !== 0){
+    else if (count % 2 !== 0){
         if (document.getElementById(count).previousSibling === null){
             alert("NO SQUARE BEHIND YOU!");
         } else {
