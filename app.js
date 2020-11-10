@@ -44,7 +44,7 @@ button.addEventListener("click", function(){
     }
 
 //when a square is clicked - random color
-    let colors = ['red', 'blue', 'green', 'yellow', 'purple', 'pink', 'white', 'black'];
+    let colors = ['red', 'blue', 'green', 'yellow', 'purple', 'pink', 'black'];
 
     function getRandomColor () {
         let randomColor = colors[Math.floor(Math.random() * colors.length)];
@@ -59,11 +59,18 @@ button.addEventListener("click", function(){
  square.addEventListener("dblclick", function(){
 
     if (square.id % 2 === 0) {
-        console.log(document.getElementById(count).nextSibling);
-        console.log("even")
+        if  (document.getElementById(count).nextSibling === null){
+            alert("NO SQUARE NEXT TO YOU!")
+        }else {
+            this.nextSibling.remove();
+        }
     }
     else if (square.id % 2 !== 0){
-        console.log("odd")
+        if (document.getElementById(count).previousSibling === null){
+            alert("NO SQUARE BEHIND YOU!");
+        } else {
+            this.previousSibling.remove();
+        }
     }
  })
    
