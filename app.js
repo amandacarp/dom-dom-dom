@@ -8,6 +8,9 @@ button.appendChild(btnText);
 document.body.appendChild(button);
 button.style.display = "block"
 
+let div = document.createElement("div");
+document.body.appendChild(div);
+
 //create button counter
 let count = 0
 
@@ -17,7 +20,7 @@ button.addEventListener("click", function(){
     let square = document.createElement("div");
     square.className = "square"
     square.id = count;
-    document.body.appendChild(square);
+    div.appendChild(square);
     square.style.display = "inline-block";
     square.style.backgroundColor = "black";
     square.style.width = "100px";
