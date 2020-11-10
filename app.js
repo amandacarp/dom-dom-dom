@@ -29,8 +29,6 @@ button.addEventListener("click", function(){
     let squareText = document.createTextNode(count);
     text.appendChild(squareText);
     square.appendChild(text);
-    text.style.opacity="0"
-
 
     square.addEventListener("mouseover", hover);
     function hover() {
@@ -61,10 +59,11 @@ button.addEventListener("click", function(){
  square.addEventListener("dblclick", function(){
 
     if (square.id % 2 === 0) {
-        square.remove();
+        console.log(document.getElementById(count).nextSibling);
+        console.log("even")
     }
-    else if (count % 2 !== 0){
-        
+    else if (square.id % 2 !== 0){
+        console.log("odd")
     }
  })
    
