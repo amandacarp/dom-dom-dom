@@ -55,7 +55,7 @@ button.addEventListener("click", function(){
     square.style.backgroundColor = randomColor;
  })   
 
- //when a square is double clicked
+ //when a square is double clicked - check if even/odd, remove sibling
  square.addEventListener("dblclick", function(){
 
     if (square.id % 2 === 0) {
