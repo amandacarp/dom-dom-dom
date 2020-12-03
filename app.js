@@ -8,19 +8,18 @@ button.appendChild(btnText);
 document.body.appendChild(button);
 button.style.display = "block"
 
-let div = document.createElement("div");
-document.body.appendChild(div);
+let mainDiv = document.createElement('div')
+document.body.appendChild(mainDiv);
+mainDiv.style.display = 'flex'
 
-//create button counter
-let count = 0
 
 //create black squares for each click/increment id number with each click
 button.addEventListener("click", function(){
-    count++;
+    let count = document.getElementsByClassName('square').length
     let square = document.createElement("div");
     square.className = "square"
     square.id = count;
-    div.appendChild(square);
+    mainDiv.appendChild(square);
     square.style.display = "inline-block";
     square.style.backgroundColor = "black";
     square.style.width = "100px";
